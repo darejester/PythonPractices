@@ -1,3 +1,3 @@
 # PythonPractices
 
-This repository holds any sample code practices in Python
+This repository holds any sample coding practices in Python
