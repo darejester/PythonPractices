@@ -34,12 +34,16 @@ def judge(banks,bankNum,min):
     while(checker > 0 ):
         checker = 0
         for x in range(0,bankNum):
-            if(sum(banks[x,:]) < min):
-                unsafe.append(x)
-                checker = checker+1
+            if x not in unsafe:
+                if(sum(banks[x,:]) < min):
+                    unsafe.append(x)
+                    banks[x,:] = 0
+                    banks[:,x] = 0
+                    checker = checker+1
             else:
                 continue
 
+    print("unsafe banks: ")
     print(unsafe)
 
     
